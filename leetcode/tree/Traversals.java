@@ -28,7 +28,9 @@ public class Traversals {
 
         preOrderTraversal(root);
         System.out.print("\n");
+        inOrderTraversal(root);
         
+    
 
     }
 
@@ -48,7 +50,20 @@ public class Traversals {
 
         
     }
-  
+    public static void inOrderTraversal(Node node) {
+        if(node == null) return;
+        
+        //Traverse left sub tree
+        inOrderTraversal(node.left);
+
+        //Visit the root node
+        System.out.print(node.data + " "); 
+
+        //Traverse right sub tree
+        inOrderTraversal(node.right);
+    }
+    
+
 }
 
 class Node {
