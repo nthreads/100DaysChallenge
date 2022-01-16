@@ -1,5 +1,6 @@
 public class MedianOfArrays {
     
+   
     /*
 
     4. Median of Two Sorted Arrays
@@ -10,7 +11,15 @@ public class MedianOfArrays {
 
     The overall run time complexity should be O(log (m+n)).
     */
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+
+
+    public static void main(String[] args) {
+        double mean = findMedianSortedArrays(new int[]{1,3}, new int[]{2});
+        System.out.println(mean);
+    }
+
+
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] mergedArray = new int[nums1.length + nums2.length];
         
         int i = 0, j = 0, k = 0;
