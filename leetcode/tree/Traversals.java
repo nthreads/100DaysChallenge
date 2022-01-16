@@ -29,9 +29,8 @@ public class Traversals {
         preOrderTraversal(root);
         System.out.print("\n");
         inOrderTraversal(root);
-        
-    
-
+        System.out.print("\n");
+        postOrderTraversal(root);    
     }
 
     public static void preOrderTraversal(Node node) {
@@ -63,6 +62,15 @@ public class Traversals {
         inOrderTraversal(node.right);
     }
     
+    public static void postOrderTraversal(Node node) {
+        if(node == null) return;
+        
+        postOrderTraversal(node.left);
+        postOrderTraversal(node.right);
+
+        System.out.print(node.data + " ");
+
+    }
 
 }
 
