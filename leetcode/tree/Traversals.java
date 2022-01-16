@@ -1,4 +1,6 @@
-import java.util.ArrayList;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 /*
                 1
@@ -12,7 +14,8 @@ import java.util.ArrayList;
     (b) Preorder (Root, Left, Right) : 1 2 4 5 3 
     (c) Postorder (Left, Right, Root) : 4 5 2 3 1 
 
- 2. Breadth First or Level Order Traversal
+ 2. Breadth First or Level Order Traversal : 1 2 3 4 5
+    
 */
 public class Traversals {
 
@@ -25,12 +28,16 @@ public class Traversals {
         root.left.left = new Node(4);
         root.left.right = new Node(5);
 
+        root.left.right.right = new Node(9);
+
 
         preOrderTraversal(root);
         System.out.print("\n");
         inOrderTraversal(root);
         System.out.print("\n");
-        postOrderTraversal(root);    
+        postOrderTraversal(root);
+        System.out.print("\n");
+        levelOrderTraversal(root);
     }
 
     public static void preOrderTraversal(Node node) {
@@ -49,6 +56,7 @@ public class Traversals {
 
         
     }
+    
     public static void inOrderTraversal(Node node) {
         if(node == null) return;
         
@@ -72,6 +80,24 @@ public class Traversals {
 
     }
 
+    public static void levelOrderTraversal(Node node) {
+        if(node == null) return;
+
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(node);
+
+        while(!queue.isEmpty()){
+
+            // Dequeue 
+            Node temp = queue.poll();
+            System.out.print(temp.data + " ");
+            //Enqueue left child
+            if(temp.left != null) queue.add(temp.left);
+
+            //Enqueue right child
+            if(temp.right != null) queue.add(temp.right);
+        }
+    }
 }
 
 class Node {
