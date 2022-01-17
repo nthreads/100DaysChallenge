@@ -7,7 +7,7 @@ import java.util.Queue;
               /   \
             2       3
           /   \
-        4       5
+        4       5              
 
  1. Depth First Traversals: 
     (a) Inorder (Left, Root, Right) : 4 2 5 1 3 
@@ -38,6 +38,9 @@ public class Traversals {
         postOrderTraversal(root);
         System.out.print("\n");
         levelOrderTraversal(root);
+
+        System.out.println("\n - Output should be 1 2 4 9");
+        printOnlyLeftNodes(root);
     }
 
     public static void preOrderTraversal(Node node) {
@@ -97,6 +100,29 @@ public class Traversals {
             //Enqueue right child
             if(temp.right != null) queue.add(temp.right);
         }
+    }
+
+    public static void printOnlyLeftNodes(Node node) {
+
+        if(node == null) return;
+
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(node);
+
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+
+            for(int i = 0; i < size; i++) {
+
+                Node temp = queue.poll();
+                if(temp.left!=null) queue.add(temp.left);
+                if(temp.right!=null) queue.add(temp.right);
+                if(i==size-1) System.out.print(temp.data + " ");
+        
+            }
+            
+        }
+        
     }
 }
 
