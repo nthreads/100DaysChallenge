@@ -19,7 +19,6 @@ import java.util.Queue;
 */
 public class Traversals {
 
-
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);
@@ -29,7 +28,6 @@ public class Traversals {
         root.left.right = new Node(5);
 
         root.left.right.right = new Node(9);
-
 
         preOrderTraversal(root);
         System.out.print("\n");
@@ -117,8 +115,7 @@ public class Traversals {
                 Node temp = queue.poll();
                 if(temp.left!=null) queue.add(temp.left);
                 if(temp.right!=null) queue.add(temp.right);
-                if(i==size-1) System.out.print(temp.data + " ");
-        
+                if(i==size-1) System.out.print(temp.data + " ");        
             }
             
         }
