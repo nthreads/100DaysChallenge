@@ -38,7 +38,6 @@ public class ReverseInteger {
             
             result = result * 10 + digit;
         }
-   
         
         return sign * result;            
     }

@@ -10,8 +10,8 @@ import java.util.Queue;
         4       5              
 
  1. Depth First Traversals: 
-    (a) Inorder (Left, Root, Right) : 4 2 5 1 3 
-    (b) Preorder (Root, Left, Right) : 1 2 4 5 3 
+    (a) Inorder (Left, Root, Right) : 4 2 5 1 3 (Level Order)
+    (b) Preorder (Root, Left, Right) : 1 2 4 5 3 (DFS)
     (c) Postorder (Left, Right, Root) : 4 5 2 3 1 
 
  2. Breadth First or Level Order Traversal : 1 2 3 4 5
@@ -29,12 +29,13 @@ public class Traversals {
 
         root.left.right.right = new Node(9);
 
+        System.out.print("\nPre Order =>");
         preOrderTraversal(root);
-        System.out.print("\n");
+        System.out.print("\nIn Order =>");
         inOrderTraversal(root);
-        System.out.print("\n");
+        System.out.print("\nPost order =>");
         postOrderTraversal(root);
-        System.out.print("\n");
+        System.out.print("\nLevel Order =>");
         levelOrderTraversal(root);
 
         System.out.println("\n - Output should be 1 2 4 9");
