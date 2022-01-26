@@ -1,13 +1,12 @@
 import java.math.MathContext;
 
 /*
-
     5. Longest Palindroming Substring
+    https://leetcode.com/problems/longest-palindromic-substring/solution
 */
 
 public class  LongestPalindromSubstring   {
 
-    
     public String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
         int start = 0, end = 0;
