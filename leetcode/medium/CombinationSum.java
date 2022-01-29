@@ -13,7 +13,7 @@ public class CombinationSum {
     }
     
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> result = new ArrayList();
+        List<List<Integer>> result = new ArrayList<>();
         
         if(candidates.length == 0) return result;
         backtrack(candidates, target, 0, new ArrayList<Integer>(), result);
@@ -31,4 +31,6 @@ public class CombinationSum {
             curr.remove(curr.size() - 1);
         }
     }
+
+    
 }
