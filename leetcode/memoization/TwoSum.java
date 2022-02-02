@@ -25,7 +25,9 @@
 
  */
 
-class TwoSum {
+import java.util.HashMap;
+
+class TwoSum2 {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
 

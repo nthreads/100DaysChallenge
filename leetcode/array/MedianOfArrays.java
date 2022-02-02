@@ -8,7 +8,6 @@
         The overall run time complexity should be O(log (m+n)).
 */
 
-
 public class MedianOfArrays {
   
     public static void main(String[] args) {

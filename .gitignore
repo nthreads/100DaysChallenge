@@ -1,2 +1,8 @@
 
 .vscode/settings.json
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+out/*
+
+ProblemSolving.iml
