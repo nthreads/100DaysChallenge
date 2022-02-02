@@ -3,12 +3,12 @@ A list of different data structure and algorithms problems with their coding sol
 
 ## LC # 4.  Median of Two Sorted Arrays
 
-        Given two sorted arrays nums1 and nums2 of size m and n respectively, 
-        return the median of the two sorted arrays.
+Given two sorted arrays nums1 and nums2 of size m and n respectively, 
+return the median of the two sorted arrays.
 
-        The overall run time complexity should be O(log (m+n)).
+The overall run time complexity should be O(log (m+n)).
 
-![alt text](https://github.com/nthreads/100DaysChallenge/blob/master/leetcode/images/2.%20MedianOfArrays.jpg)
+[![alt text](https://github.com/nthreads/100DaysChallenge/blob/master/leetcode/images/2.%20MedianOfArrays.jpg)](https://github.com/nthreads/100DaysChallenge/blob/master/leetcode/array/MedianOfArrays.java)
 
 ___
 
@@ -35,4 +35,4 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
   Explanation: In this case, no transactions are done and the max profit = 0.
   ```
 
-![alt text](https://github.com/nthreads/100DaysChallenge/blob/master/leetcode/images/1.%20BestTimeToBuySellStock.jpg)
+[![alt text](https://github.com/nthreads/100DaysChallenge/blob/master/leetcode/images/1.%20BestTimeToBuySellStock.jpg)](https://github.com/nthreads/100DaysChallenge/blob/master/leetcode/array/BestTimeToBuySellStock.java)
