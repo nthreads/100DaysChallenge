@@ -1,5 +1,10 @@
-// https://leetcode.com/problems/reverse-words-in-a-string-iii/submissions/
+// https://leetcode.com/problems/reverse-words-in-a-string-iii/
+/*
+    Example 1:
 
+    Input: s = "Let's take LeetCode contest"
+    Output: "s'teL ekat edoCteeL tsetnoc"
+ */
 public class ReverseWords {
     public String reverseWords(String s) {
         if(s == null || s.length() <= 1) return s;

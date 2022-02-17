@@ -15,7 +15,8 @@ import java.util.Queue;
     (c) Postorder (Left, Right, Root) : 4 5 2 3 1 
 
  2. Breadth First or Level Order Traversal : 1 2 3 4 5
-    
+
+ 3. Height of tree is edges count from root to the leaf : 2
 */
 public class Traversals {
 
@@ -29,6 +30,10 @@ public class Traversals {
 
         root.left.right.right = new Node(9);
 
+        System.out.print("\nHeight =>");
+
+        System.out.println("Height = " + findHeight(root));
+
         System.out.print("\nPre Order =>");
         preOrderTraversal(root);
         System.out.print("\nIn Order =>");
@@ -40,6 +45,35 @@ public class Traversals {
 
         System.out.println("\n - Output should be 1 2 4 9");
         printOnlyLeftNodes(root);
+    }
+
+    public static Node insert(Node root, int data) {
+        if(root == null) {
+            root = new Node(data);
+        }
+
+        if(data < root.data) {
+            root.left = insert(root.left, data);
+        }
+
+        if(data > root.data) {
+            root.right = insert(root.right, data);
+        }
+
+        return root;
+    }
+
+    public static int findHeight(Node root) {
+        int h = 0;
+        if(root == null) return h;
+        
+        if(root.left != null)
+            h = 1 + findHeight(root.left);
+        
+        if(root.right != null)
+            h = 1 + findHeight(root.right);
+        
+        return h;        
     }
 
     public static void preOrderTraversal(Node node) {

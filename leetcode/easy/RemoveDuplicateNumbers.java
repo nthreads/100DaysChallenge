@@ -5,9 +5,9 @@
 */
 public class RemoveDuplicateNumbers {
     public static void main(String[] args) {
-        int[] nums = new int[] {1, 1, 2};
 
-        System.out.print(removeDuplicates(nums));
+        System.out.println(removeDuplicates(new int[] {1, 2}));
+        System.out.print(removeDuplicates(new int[] {1, 2, 2}));
     }
 
     public static int removeDuplicates(int[] nums) {

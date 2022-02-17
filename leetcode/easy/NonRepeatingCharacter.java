@@ -3,10 +3,10 @@ import java.util.HashMap;
 class NonRepeatingCharacter {
 
     public static void main(String[] args) {
-        System.out.println(firstUniqChar("aab"));
+        System.out.println(firstUniqueChar("aab"));
     }
 
-    public static int firstUniqChar(String s) {
+    public static int firstUniqueChar(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         
         for(int i = 0; i < s.length(); i++) {

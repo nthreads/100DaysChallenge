@@ -28,6 +28,7 @@ public class MedianOrRunningStream {
     public static void main(String[] args) {
         addNum(5);
         addNum(4);
+        addNum(3);
         System.out.println("Median " + findMedian());
     }
 }

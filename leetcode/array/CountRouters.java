@@ -1,3 +1,5 @@
+import java.util.concurrent.ExecutionException;
+
 public class CountRouters {
 
     public static void main(String[] args) {
@@ -6,6 +8,7 @@ public class CountRouters {
 
     public static int countRouters(int[] buildings, int[] routeLoc, int[] routeRange) {
         int[] coverage = new int[buildings.length];
+
 
         for (int i = 0; i < routeLoc.length; i++) {
             int buildingLocation = routeLoc[i] - 1;

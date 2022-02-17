@@ -26,7 +26,7 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 public class BestTimeToBuySellStock {
     
     
-    public int maxProfit(int[] prices) {    
+    public static int maxProfit(int[] prices) {
         
         int max = Integer.MIN_VALUE;
         int buyingPrice = Integer.MAX_VALUE;
@@ -46,5 +46,10 @@ public class BestTimeToBuySellStock {
         }
         
         return (max == Integer.MIN_VALUE) ? 0 : max;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(maxProfit(new int[]{7,1,5,3,6,4}));
+        System.out.println(maxProfit(new int[]{7,6,4,3,1}));
     }
 }

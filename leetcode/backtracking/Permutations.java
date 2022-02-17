@@ -17,6 +17,7 @@ public class Permutations {
     private static void backtrack(List<List<Integer>> result, int[] nums, List<Integer> curr, Set<Integer> set) {
         if(curr.size() == nums.length) {
             result.add(new ArrayList<>(curr));
+            System.out.print(curr + " ");
             return;
         }
         
@@ -24,7 +25,7 @@ public class Permutations {
             if(set.contains(nums[i])) continue; // element already exists, skip
             
             curr.add(nums[i]);
-            set.add(nums[i]);  // Redundant set to make lookup fast if element exisit
+            set.add(nums[i]);  // Redundant set to make lookup fast if element exists
             
             backtrack(result, nums, curr, set);
             
@@ -35,12 +36,6 @@ public class Permutations {
     }
 
     public static void main(String[] args) {
-        int[][] inputs = new int[][]{{1, 2, 3}, {1}};
-        
-        // for (int i = 0; i < inputs.length; i++) {
-        //     permute(inputs[i]);
-        // }
-
         permute(new int[]{1, 2, 3});
         
     }

@@ -9,17 +9,23 @@
 
 public class PowerOfTwo {
     
-    public boolean isPowerOfTwo(int n) {
+    public static boolean isPowerOfTwo(int n) {
         if (n == 0)
             return false;
                     
         while (n != 1) {
-            // if its odd
+            // if it's odd e.g 3 is an odd number so we will return false immidiatly
             if (n % 2 != 0)
                 return false;
             n = n / 2;
         }
         
         return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Power of two " + isPowerOfTwo(2));
+        System.out.println("Power of two " + isPowerOfTwo(16));
+        System.out.println("Power of two " + isPowerOfTwo(3));
     }
 }
