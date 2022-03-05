@@ -1,14 +1,25 @@
 public class NumberOfIslands {
-    
+    // LC # 200
+    // https://leetcode.com/problems/number-of-islands/
+
     public static void main(String[] args) {
-        char[][] grid = [
-            ["1","1","1","1","0"],
-            ["1","1","0","1","0"],
-            ["1","1","0","0","0"],
-            ["0","0","0","0","0"]
-          ]
-          
-        System.out.println("Number of Islands Founds = " + numIslands(grid));
+        // 1 Island
+        char[][] grid1 = new char[][]{
+                {'1','1','1','1','0'},
+                {'1','1','0','1','0'},
+                {'1','1','0','0','0'},
+                {'0','0','0','0','0'}
+        };
+
+        // 3 Islands
+        char[][] grid2 = new char[][]{
+                {'1','1','0','1','0'},
+                {'1','1','0','1','0'},
+                {'0','0','0','0','0'},
+                {'0','0','0','1','1'}
+        };
+
+        System.out.println("Number of Islands Founds = " + numIslands(grid2));
     }
 
     public static int numIslands(char[][] grid) {
