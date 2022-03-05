@@ -14,7 +14,7 @@ public class PowerOfTwo {
             return false;
                     
         while (n != 1) {
-            // if it's odd e.g 3 is an odd number so we will return false immidiatly
+            // if it's odd e.g 3 is an odd number, so we will return false immediately
             if (n % 2 != 0)
                 return false;
             n = n / 2;
@@ -24,8 +24,9 @@ public class PowerOfTwo {
     }
 
     public static void main(String[] args) {
-        System.out.println("Power of two " + isPowerOfTwo(2));
-        System.out.println("Power of two " + isPowerOfTwo(16));
-        System.out.println("Power of two " + isPowerOfTwo(3));
+        System.out.println("Power of two " + isPowerOfTwo(1));  // True
+        System.out.println("Power of two " + isPowerOfTwo(2));  // True
+        System.out.println("Power of two " + isPowerOfTwo(16)); // True
+        System.out.println("Power of two " + isPowerOfTwo(3));  // False
     }
 }

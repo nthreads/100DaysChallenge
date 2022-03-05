@@ -24,8 +24,7 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 */
 
 public class BestTimeToBuySellStock {
-    
-    
+
     public static int maxProfit(int[] prices) {
         
         int max = Integer.MIN_VALUE;

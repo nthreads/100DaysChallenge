@@ -16,8 +16,14 @@ public class DestinationCity {
                 Arrays.asList("Z", "B")
         ));
 
+        List<List<String>> p3 = new ArrayList<>(Arrays.asList(
+                Arrays.asList("A", "Z"),
+                Arrays.asList("Z", "A")
+        ));
+
         System.out.println(destCity(p1));
         System.out.println(destCity(p2));
+        System.out.println(destCity(p3));
     }
 
     public static String destCity(List<List<String>> paths) {
@@ -37,7 +43,7 @@ public class DestinationCity {
                 destinations.remove(source);
             }
         }
-
-        return destinations.iterator().next();
+        boolean hasNext = destinations.iterator().hasNext();
+        return hasNext ? destinations.iterator().next() : "";
     }
 }
