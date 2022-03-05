@@ -47,11 +47,8 @@ public class ReverseString {
     private char[] reverse(char[] a, int left, int right) {
         while(left < right) {
             char temp = a[left];
-            a[left] = a[right];
-            a[right] = temp;
-            
-            left++;
-            right--;
+            a[left++] = a[right];
+            a[right--] = temp;
         }
         
         return a;

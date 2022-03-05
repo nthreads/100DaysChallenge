@@ -1,6 +1,6 @@
 
  //Definition for singly-linked list
-            p     c   n
+ //           p     c   n
  // Input:  null [1 -> 2 -> 3 -> 4 -> 5] -> null
  // Output: null [5 -> 4 -> 3 -> 2 -> 1] -> null
 

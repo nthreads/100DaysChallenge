@@ -6,6 +6,7 @@
     Output: "s'teL ekat edoCteeL tsetnoc"
  */
 public class ReverseWords {
+
     public String reverseWords(String s) {
         if(s == null || s.length() <= 1) return s;
         
@@ -28,11 +29,8 @@ public class ReverseWords {
         
         while(left < right) {
             char temp = charArray[left];
-            charArray[left] = charArray[right];
-            charArray[right] = temp;
-            
-            left++;
-            right--;                
+            charArray[left++] = charArray[right];
+            charArray[right--] = temp;
         }
         
         return String.valueOf(charArray);
