@@ -9,7 +9,6 @@ public class CountRouters {
     public static int countRouters(int[] buildings, int[] routeLoc, int[] routeRange) {
         int[] coverage = new int[buildings.length];
 
-
         for (int i = 0; i < routeLoc.length; i++) {
             int buildingLocation = routeLoc[i] - 1;
             int range = routeRange[i];
@@ -17,8 +16,9 @@ public class CountRouters {
             int minBuildingRange = Math.max(0, buildingLocation - range);
             coverage[minBuildingRange] += 1;
 
-            if (buildingLocation + range < coverage.length - 1)
+            if (buildingLocation + range < coverage.length - 1) {
                 coverage[buildingLocation + range + 1] -= 1;
+            }
         }
 
         for (int i = 1; i < coverage.length; i++) {

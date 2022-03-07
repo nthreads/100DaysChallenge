@@ -36,6 +36,6 @@ public class OddOccurrence {
 
         System.out.println(find(s1));   // Expected result 'a'
         System.out.println(find(s2));   // Expected result '7'
-        System.out.println(find(s3));   // Expected result 'a'
+        System.out.println(find(s3));   // Expected result 'b'
     }
 }

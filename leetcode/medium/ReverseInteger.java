@@ -20,14 +20,12 @@ public class ReverseInteger {
         
         int result= 0;
         int sign = 1;
-        
-        
-        String str = String.valueOf(Math.abs(x));
-        
+
         if(x < 0) {
-            sign = -1;            
+            sign = -1;
         }
-        
+
+        String str = String.valueOf(Math.abs(x));
         int len = str.length();        
         
         for(int i = len-1; i >= 0; i--){

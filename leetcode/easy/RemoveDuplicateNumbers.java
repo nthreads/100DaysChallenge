@@ -15,7 +15,7 @@ public class RemoveDuplicateNumbers {
 
         int p1 = 0;
 
-        for(int p2 = 0; p2 < nums.length; p2++) {
+        for(int p2 = 1; p2 < nums.length; p2++) {
             if(nums[p1] != nums[p2] ) {
                 p1++;
                 nums[p1] = nums[p2];

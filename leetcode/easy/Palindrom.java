@@ -12,7 +12,7 @@ For example, 121 is a palindrome while 123 is not.
 */
 
 public class Palindrom {
-    public boolean isPalindromNumber(int x) {
+    public static boolean isPalindromNumber(int x) {
         if(x  < 0) return false;
         
         int remainder = 0, reversed = 0, original = x;    
@@ -24,6 +24,10 @@ public class Palindrom {
         }
         
         return (reversed == original);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPalindromNumber(121));
     }
 }
 
