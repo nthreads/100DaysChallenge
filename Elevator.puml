@@ -1,0 +1,15 @@
+@startuml
+class elevator.Elevator {
+~ Direction currDirection
+~ State currState
+~ int currFloor
+~ TreeSet<Request> currentJobs
+~ TreeSet<Request> pendingUpJobs
+~ TreeSet<Request> pendingDownJobs
++ void startElevator()
+- void addPendingUpJobsToCurrentJobs()
+- void processDownRequest(Request)
+- void addPendingDownJobsToCurrJobs()
+- void processUpRequest(Request)
+}
+@enduml
